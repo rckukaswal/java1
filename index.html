@@ -1,0 +1,27 @@
+<th:block th:insert="fragments/header :: header"></th:block>
+
+<th:block th:insert="fragments/nav :: nav"></th:block>
+
+<main class="main-content">
+    <div class="container">
+        <section class="hero-section">
+            <h1 th:text="${welcomeMessage}">हमारी वेबसाइट में आपका स्वागत है</h1>
+            <p>यह एक professional वेबसाइट है जो Java Spring Boot से बनी है</p>
+            
+            <div class="cta-buttons">
+                <a th:href="@{/about}" class="btn btn-primary">हमारे बारे में जानें</a>
+                <a th:href="@{/contact}" class="btn btn-secondary">संपर्क करें</a>
+            </div>
+        </section>
+
+        <section class="greet-section">
+            <h2>व्यक्तिगत अभिवादन</h2>
+            <form action="/greet" method="get" class="greet-form">
+                <input type="text" name="name" placeholder="अपना नाम दर्ज करें" required>
+                <button type="submit" class="btn">अभिवादन प्राप्त करें</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<th:block th:insert="fragments/footer :: footer"></th:block>
